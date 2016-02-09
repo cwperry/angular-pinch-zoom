@@ -111,18 +111,7 @@ angular.module('ngPinchZoom', [])
         }
       }
 
-      if (mode === 'swipe') {
-        evt.preventDefault();
-
-        moveX = touches[0].clientX - startX;
-        moveY = touches[0].clientY - startY;
-
-        positionX = initialPositionX + moveX;
-        positionY = initialPositionY + moveY;
-
-        transformElement();
-
-      } else if (mode === 'pinch') {
+      if (mode === 'pinch') {
         evt.preventDefault();
 
         distance = getDistance(touches);
